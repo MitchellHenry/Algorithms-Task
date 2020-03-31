@@ -36,7 +36,7 @@ namespace Algorithms
                     }
                 }
             }
-            if(r == "Shell")
+            if (r == "Shell")
             {
                 int i, j, inc, temp;
                 inc = 3;
@@ -61,37 +61,59 @@ namespace Algorithms
                         inc = 1;
                 }
             }
+            Console.WriteLine("What number do you what to search for?");
+            int NumToSearchFor = int.Parse(Console.ReadLine());
             Console.WriteLine("Linear or Binary Search?");
-            r = Console.ReadLine();
+               r = Console.ReadLine();
             if(r == "Linear")
             {
-                int i = 0;
+                int LoopCount = 0;
+                 int i = 0;
                 while(i < UnsortedNumbers.Count - 1)
                 {
-                    if(UnsortedNumbers[i] == 575154)
+                    if(UnsortedNumbers[i] == NumToSearchFor)
                     {
+                        LoopCount++;
                         Console.WriteLine(UnsortedNumbers[i] + " is at Postion:" + i);
-                        Console.WriteLine(UnsortedNumbers[i]);
+                        Console.WriteLine("Num Searched for: " + UnsortedNumbers[i]);
+                        Console.WriteLine("Num of Loops: " + LoopCount);
                         i = UnsortedNumbers.Count - 1;                 
                     }
                     else
                     {
+                        LoopCount++;
                         i++;
                     }
                 } 
             }
             if(r == "Binary")
             {
-               Console.WriteLine("575154 is at Position:" + UnsortedNumbers.BinarySearch(575154));
-               Console.WriteLine(UnsortedNumbers[UnsortedNumbers.BinarySearch(575154)]);
-            }
-            //Console.WriteLine(UnsortedNumbers[0]);
-            //Console.WriteLine(UnsortedNumbers[1]);
-            //Console.WriteLine(UnsortedNumbers[2]);
-            //Console.WriteLine(UnsortedNumbers[3]);
-            //Console.WriteLine(UnsortedNumbers[4]);
-            //Console.WriteLine(UnsortedNumbers[5]);
-
+                int min = 0;
+                int LoopCount = 0;
+                int max = UnsortedNumbers.Count - 1;
+                while (min <= max)
+                {
+                    int mid = (min + max) / 2;
+                    if (NumToSearchFor == UnsortedNumbers[mid])
+                    {
+                        LoopCount++;
+                        Console.WriteLine("Found at Postion:" + mid);
+                        Console.WriteLine("Number searched for: " + UnsortedNumbers[mid]);
+                        Console.WriteLine("Num of Loops: " + LoopCount);
+                        min = max + 1;
+                    }
+                    else if (NumToSearchFor < UnsortedNumbers[mid])
+                    {
+                        LoopCount++;
+                        max = mid - 1;
+                    }
+                    else
+                    {
+                        LoopCount++;
+                        min = mid + 1;
+                    }
+                }
+            } 
             Console.ReadKey(true);
 
         }
