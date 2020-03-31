@@ -1,0 +1,6 @@
+C:\Users\Mitchell\source\repos\Algorithms\bin\Debug\Algorithms.exe.config
+C:\Users\Mitchell\source\repos\Algorithms\bin\Debug\Algorithms.exe
+C:\Users\Mitchell\source\repos\Algorithms\bin\Debug\Algorithms.pdb
+C:\Users\Mitchell\source\repos\Algorithms\obj\Debug\Algorithms.csprojAssemblyReference.cache
+C:\Users\Mitchell\source\repos\Algorithms\obj\Debug\Algorithms.exe
+C:\Users\Mitchell\source\repos\Algorithms\obj\Debug\Algorithms.pdb
